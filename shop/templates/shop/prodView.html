@@ -1,0 +1,23 @@
+{% extends 'shop/basic.html' %}
+
+{% block title %} {{product.product_name}} - My Awesome Cart{% endblock %}
+
+{% block body %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">   <!--bootstap has 12 grids out of which 4 are used-->
+            <div class="row">
+               <img src="/media/{{product.image}}">
+            </div>
+        </div>
+
+        <div class="col-md-8">  <!-- 8 grids are used here-->
+            <h1>{{product.product_name}}</h1>
+            <p><b>Rs.{{product.price}}</b></p>
+            <p>{{product.desc}}</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
